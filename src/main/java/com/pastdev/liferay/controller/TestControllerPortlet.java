@@ -1,8 +1,7 @@
-package com.pastdev.liferay.view;
+package com.pastdev.liferay.controller;
 
 import java.io.IOException;
 
-import javax.portlet.GenericPortlet;
 import javax.portlet.PortletException;
 import javax.portlet.PortletRequestDispatcher;
 import javax.portlet.RenderRequest;
@@ -10,11 +9,11 @@ import javax.portlet.RenderResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.context.WebApplicationContext;
 
-public class TestJndiPortlet extends GenericPortlet {
+public class TestControllerPortlet extends
+		AbstractSpringServiceLookupControllerPortlet {
 	private static final Logger logger = LoggerFactory
-			.getLogger(TestJndiPortlet.class);
+			.getLogger(TestControllerPortlet.class);
 
 	private static final String ATTRIBUTE_VALUE = "com.pastdev.liferay.view.TestJndiPortlet.value";
 	private static final String JSP_VIEW = "/view.jsp";
@@ -31,14 +30,5 @@ public class TestJndiPortlet extends GenericPortlet {
 		PortletRequestDispatcher requestDispatcher = getPortletContext()
 				.getRequestDispatcher(JSP_VIEW);
 		requestDispatcher.forward(request, response);
-	}
-
-	protected <T> T service(Class<T> service) {
-		return getWebApplicationContext().getBean(service);
-	}
-
-	protected WebApplicationContext getWebApplicationContext() {
-		return (WebApplicationContext) getPortletContext().getAttribute(
-				WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
 	}
 }
