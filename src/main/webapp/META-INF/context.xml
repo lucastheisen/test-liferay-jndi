@@ -20,5 +20,5 @@
   The following must be added to GlobalNamingResources:
   <Environment name="test-liferay-jndi/testValue" value="value" type="java.lang.String" override="false" />
   -->
-  <ResourceLink name="testValue" type="java.lang.String" global="test-liferay-jndi/testValue" />
+  <ResourceLink name="value" type="java.lang.String" global="test-liferay-jndi/testValue" />
 </Context>

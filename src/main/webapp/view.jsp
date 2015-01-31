@@ -5,4 +5,4 @@
 
 <portlet:defineObjects />
 
-<span class="test-jndi">${requestScope['com.pastdev.liferay.jndi.TestJndiPortlet.testValue']}</span>
+<span class="test-jndi">${requestScope['com.pastdev.liferay.view.TestJndiPortlet.value'].stuff}</span>

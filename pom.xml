@@ -20,7 +20,7 @@
     <log4j.version>1.2.17</log4j.version>
     <portlet.version>2.0</portlet.version>
     <slf4j.version>1.7.7</slf4j.version>
-    <spring.version>3.0.7.RELEASE</spring.version>
+    <spring.version>3.2.3.RELEASE</spring.version>
     <tomcat.version>7.0.54</tomcat.version>
 
     <!-- Plugin versions -->
@@ -72,6 +72,12 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
+      <groupId>com.liferay.portal</groupId>
+      <artifactId>util-taglib</artifactId>
+      <version>${liferay.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
       <groupId>javax.portlet</groupId>
       <artifactId>portlet-api</artifactId>
       <version>${portlet.version}</version>
@@ -80,6 +86,12 @@
     <dependency>
       <groupId>org.apache.tomcat</groupId>
       <artifactId>tomcat-el-api</artifactId>
+      <version>${tomcat.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jsp-api</artifactId>
       <version>${tomcat.version}</version>
       <scope>provided</scope>
     </dependency>
