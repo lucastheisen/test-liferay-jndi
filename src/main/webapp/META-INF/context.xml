@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE Context[
+<!ELEMENT Context (ResourceLink*, Environment*)>
+<!ELEMENT ResourceLink EMPTY>
+<!ELEMENT Environment EMPTY>
+<!ATTLIST Context antiJARLocking (true) #REQUIRED>
+<!ATTLIST Context useHttpOnly (true) #REQUIRED>
+<!ATTLIST Context copyXML CDATA #FIXED "true">
+<!ATTLIST ResourceLink name CDATA #REQUIRED>
+<!ATTLIST ResourceLink global CDATA #REQUIRED>
+<!ATTLIST ResourceLink type CDATA #REQUIRED>
+<!ATTLIST Environment name CDATA #REQUIRED>
+<!ATTLIST Environment value CDATA #REQUIRED>
+<!ATTLIST Environment type CDATA #REQUIRED>
+<!ATTLIST Environment override CDATA #REQUIRED>
+]>
+
+<Context antiJARLocking="true" useHttpOnly="true">
+  <Environment name="testValue" value="value" type="java.lang.String" override="false" />
+</Context>
